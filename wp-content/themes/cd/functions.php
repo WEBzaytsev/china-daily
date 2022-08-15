@@ -229,3 +229,10 @@ if (function_exists('acf_add_options_page')) {
         ]
     );
 }
+
+/**
+ * Customize menus
+ */
+add_filter('nav_menu_link_attributes', 'cd_add_menu_link_class', 1, 3);
+add_filter('nav_menu_css_class', 'cd_add_additional_class_on_li', 1, 3);
+require get_template_directory() . '/includes/customize-menu.php';
