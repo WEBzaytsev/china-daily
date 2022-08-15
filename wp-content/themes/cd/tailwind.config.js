@@ -56,7 +56,15 @@ module.exports = {
             },
             colors: {},
             transitionDuration: {},
-            fontFamily: {},
+            fontFamily: {
+                inter: [
+                    'Inter',
+                    'Roboto',
+                    'Helvetica',
+                    'Arial',
+                    'sans-serif'
+                ],
+            },
         }
     },
     plugins: [],
