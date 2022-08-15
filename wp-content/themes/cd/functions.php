@@ -209,9 +209,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * @return string
  */
 
-add_filter('acf/settings/save_json', 'metal_acf_json_save_point');
+add_filter('acf/settings/save_json', 'cd_acf_json_save_point');
 
-function metal_acf_json_save_point($path)
+function cd_acf_json_save_point($path)
 {
     return get_stylesheet_directory() . '/acf-json';
 }
