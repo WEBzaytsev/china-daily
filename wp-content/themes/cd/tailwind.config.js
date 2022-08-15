@@ -54,7 +54,18 @@ module.exports = {
                 '87.5': '21.875rem',
                 '98': '24.5rem',
             },
-            colors: {},
+            colors: {
+                'common-bg': '#F0F4FD',
+                grey: {
+                    300: '#E5E5E5',
+                    900: '#333'
+                },
+                blue: '#557AFF',
+                ochre: '#E2954D',
+                red: '#D80027',
+                green: '#49B85A',
+                orange: '#FF8B1F'
+            },
             transitionDuration: {},
             fontFamily: {
                 inter: [
