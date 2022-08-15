@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "common";
+
 body.admin-bar .header{
   top:32px;
 }

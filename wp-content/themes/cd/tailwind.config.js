@@ -63,7 +63,10 @@ module.exports = {
                 blue: '#557AFF',
                 ochre: '#E2954D',
                 red: '#D80027',
-                green: '#49B85A',
+                green: {
+                    600: '#49B85A',
+                    700: '#209833',
+                },
                 orange: '#FF8B1F'
             },
             transitionDuration: {},
@@ -76,6 +79,16 @@ module.exports = {
                     'sans-serif'
                 ],
             },
+            borderRadius: {
+                10: '10px'
+            },
+            boxShadow: {
+                btn: '0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.3)',
+                icon: 'inset 0px 4px 4px rgba(0, 0, 0, 0.25)'
+            },
+            dropShadow: {
+                icon: '0px 4px 4px rgba(0, 0, 0, 0.3)'
+            }
         }
     },
     plugins: [],
