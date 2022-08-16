@@ -85,6 +85,7 @@ module.exports = {
             borderRadius: {
                 10: '10px',
                 13: '13px',
+                20: '20px',
                 30: '30px'
             },
             boxShadow: {
@@ -101,6 +102,7 @@ module.exports = {
             fontSize: {
                 '2.9xl': '28px',
                 '3.3xl': '32px',
+                '5.3xl': ['52px', '63px'],
                 'huge': ['80px', '103.5%']
             },
             letterSpacing: {

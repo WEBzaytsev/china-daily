@@ -215,6 +215,25 @@ get_header(); ?>
             <?php endwhile; ?>
         <?php endif; ?>
         <!--End five section-->
+
+        <!--Six section-->
+        <?php if (have_rows('metrics')) : ?>
+            <div class="grid grid-cols-4 gap-x-2">
+                <?php while (have_rows('metrics')) : the_row(); ?>
+                    <div class="p-6 bg-white rounded-20 shadow-block">
+                        <p class="font-semibold tracking-tight mb-3 text-5.3xl">
+                            <?php the_sub_field('value'); ?>
+                        </p>
+                        <p class="text-grey-900/60 tracking-small font-medium text-xl">
+                            <?php the_sub_field('text'); ?>
+                        </p>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
+        <!--End six section-->
+
+        <!-- TODO: Blog posts -->
     </main>
 
 <?php get_footer();
@@ -222,7 +241,7 @@ get_header(); ?>
 function formatColor($rgba_color_array): string
 {
     $i = 1;
-    return trim(array_reduce($rgba_color_array, function($carry, $item) use ($rgba_color_array, &$i) {
+    return trim(array_reduce($rgba_color_array, function ($carry, $item) use ($rgba_color_array, &$i) {
         if ($i >= count($rgba_color_array)) {
             return $carry;
         }
