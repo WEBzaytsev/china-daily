@@ -11,7 +11,7 @@
 
 ?>
 
-<footer class="footer container pb-[146px]">
+<footer class="footer relative z-10 container pb-[146px]">
     <?php get_template_part('/template-parts/form'); ?>
     <div class="grid grid-cols-footer items-start gap-x-[9.5%] mt-4 pt-5">
         <p class="font-medium text-grey-900/50"><?php the_field('copyright', 'option'); ?></p>

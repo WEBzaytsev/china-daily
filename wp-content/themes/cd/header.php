@@ -27,7 +27,7 @@
 <body <?php body_class('bg-common-bg font-inter pt-[73px]'); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="">
-    <header class="header fixed top-0 left-0 w-full bg-common-bg py-3">
+    <header class="header fixed z-20 top-0 left-0 w-full bg-common-bg py-3">
         <div class="container w-full flex items-center justify-between">
             <div class="flex items-center">
                 <a href="<?php esc_url(get_home_url(), 'cd') ?>">
