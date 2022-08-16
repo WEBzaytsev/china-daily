@@ -109,6 +109,9 @@ module.exports = {
             },
             lineHeight: {
                 huge: '38px'
+            },
+            gridTemplateRows: {
+                'services-list': 'repeat(2, 420px)'
             }
         }
     },
