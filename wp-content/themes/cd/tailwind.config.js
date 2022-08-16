@@ -99,6 +99,7 @@ module.exports = {
                 footer: 'auto minmax(0, 100%) auto'
             },
             fontSize: {
+                '2.9xl': '28px',
                 '3.3xl': '32px',
                 'huge': ['80px', '103.5%']
             },

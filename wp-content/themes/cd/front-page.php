@@ -163,6 +163,39 @@ get_header(); ?>
             </div>
         <?php endif; ?>
         <!--End third section-->
+
+        <!--Four section-->
+        <?php if (have_rows('scheme')) : ?>
+            <div class="grid grid-cols-3 gap-x-2 grid-rows-[432px]">
+                <?php
+                $scheme_item_count = 1;
+                while (have_rows('scheme')) : the_row(); ?>
+                    <div class="relative bg-white rounded-30 overflow-hidden shadow-block pt-9 pl-11.5 pr-4">
+                        <div class="relative z-20">
+                            <span class="block w-12 h-12 rounded-full border-2 border-solid border-black/10 flex items-center justify-center mb-3.5">
+                                <?php esc_html_e($scheme_item_count); ?>
+                            </span>
+                            <p class="tracking-tight font-semibold leading-huge text-2.9xl mb-3.5">
+                                <?php the_sub_field('caption'); ?>
+                            </p>
+                            <p class="tracking-small text-grey-900/50 font-medium">
+                                <?php the_sub_field('short-text'); ?>
+                            </p>
+                        </div>
+                        <?php $img = get_sub_field('img'); ?>
+                        <?php if ($img) : ?>
+                            <figure class="absolute z-10 bottom-0 right-0">
+                                <img src="<?php echo esc_url($img['url']); ?>"
+                                     alt="<?php echo esc_attr($img['alt']); ?>"/>
+                            </figure>
+                        <?php endif; ?>
+                    </div>
+                    <?php
+                    $scheme_item_count++;
+                endwhile; ?>
+            </div>
+        <?php endif; ?>
+        <!--End four section-->
     </main>
 
 <?php get_footer();
