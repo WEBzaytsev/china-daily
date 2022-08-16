@@ -58,23 +58,7 @@
                    href="tel:<?php the_field('phone', 'option'); ?>">
                     <?php the_field('phone', 'option'); ?>
                 </a>
-                <?php if (have_rows('socials', 'option')) :
-                    $socials_count = count(get_field('socials', 'option'))
-                    ?>
-                    <!--                <div class="grid-cols-2"></div>-->
-                    <div class="grid grid-cols-<?php echo $socials_count; ?> gap-2.5 mr-3.5">
-                        <?php while (have_rows('socials', 'option')) : the_row(); ?>
-                            <a href="<?php the_sub_field('url'); ?>"
-                               class="drop-shadow-icon">
-                                <?php $icon = get_sub_field('icon'); ?>
-                                <?php if ($icon) : ?>
-                                    <img src="<?php echo esc_url($icon['url']); ?>"
-                                         alt="<?php echo esc_attr($icon['alt']); ?>"/>
-                                <?php endif; ?>
-                            </a>
-                        <?php endwhile; ?>
-                    </div>
-                <?php endif; ?>
+                <?php get_template_part('/template-parts/socials', null, array('icon-size' => 40)); ?>
                 <a href="#"
                    class="px-5 py-3 bg-green-600 text-white font-medium text-[15px] rounded-10 shadow-btn transition-all duration-300 hover:bg-green-700">
                     <span class="">
