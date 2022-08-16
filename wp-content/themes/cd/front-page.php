@@ -85,7 +85,7 @@ get_header(); ?>
         $services = query_posts($services_args);
 
         if (have_posts()) : ?>
-            <div class="grid grid-cols-4 gap-4 grid-rows-services-list">
+            <div class="grid grid-cols-4 gap-2 grid-rows-services-list">
                 <?php
                 $service_count = 1;
                 while (have_posts()) : the_post();
@@ -131,6 +131,38 @@ get_header(); ?>
             </div>
         <?php endif; ?>
         <!--End second section-->
+
+        <a href="#"
+           class="w-full block text-white py-9.5 bg-green-600 hover:bg-green-700 shadow-btn transition-all duration-300 font-medium text-xl tracking-small text-center rounded-30">
+            <?php esc_html_e('Оставить  заявку', 'cd'); ?>
+        </a>
+
+        <!--Third section-->
+        <?php if (have_rows('benefits')) : ?>
+            <div class="grid grid-cols-2 gap-x-2 grid-rows-[596px]">
+                <?php while (have_rows('benefits')) : the_row(); ?>
+                    <div class="relative bg-white rounded-30 overflow-hidden pt-11.5 px-4 shadow-block">
+                        <div class="relative z-20 flex flex-col items-center text-center">
+                            <div class="mb-6 tracking-tight font-semibold text-4xl">
+                                <?php the_sub_field('caption'); ?>
+                            </div>
+                            <p class="text-lg text-grey-900/50 font-medium">
+                                <?php the_sub_field('short-text'); ?>
+                            </p>
+                        </div>
+                        <?php $img = get_sub_field('img'); ?>
+                        <?php if ($img) : ?>
+                            <figure class="absolute z-10 bottom-0 w-full left-0">
+                                <img src="<?php echo esc_url($img['url']); ?>"
+                                     class="block max-w-full mx-auto"
+                                     alt="<?php echo esc_attr($img['alt']); ?>"/>
+                            </figure>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
+        <!--End third section-->
     </main>
 
 <?php get_footer();

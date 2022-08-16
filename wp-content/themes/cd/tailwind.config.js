@@ -89,7 +89,8 @@ module.exports = {
             },
             boxShadow: {
                 btn: '0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.3)',
-                icon: 'inset 0px 4px 4px rgba(0, 0, 0, 0.25)'
+                icon: 'inset 0px 4px 4px rgba(0, 0, 0, 0.25)',
+                block: '0px 0px 15px rgba(0, 0, 0, 0.05)',
             },
             dropShadow: {
                 icon: '0px 4px 4px rgba(0, 0, 0, 0.3)'
