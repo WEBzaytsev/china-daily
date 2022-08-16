@@ -236,3 +236,12 @@ if (function_exists('acf_add_options_page')) {
 add_filter('nav_menu_link_attributes', 'cd_add_menu_link_class', 1, 3);
 add_filter('nav_menu_css_class', 'cd_add_additional_class_on_li', 1, 3);
 require get_template_directory() . '/includes/customize-menu.php';
+
+/**
+ * Create custom post types
+ */
+require get_template_directory() . '/includes/custom-post-type.php';
+require get_template_directory() . '/includes/custom-taxonomy.php';
+
+add_action('init', 'cd_create_post_type');
+add_action('init', 'cd_register_taxonomy');
