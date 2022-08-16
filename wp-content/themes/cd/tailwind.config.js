@@ -58,6 +58,8 @@ module.exports = {
                 'common-bg': '#F0F4FD',
                 grey: {
                     300: '#E5E5E5',
+                    400: '#D5D5D5',
+                    600: '#A0A0A0',
                     900: '#333'
                 },
                 blue: '#557AFF',
@@ -80,7 +82,9 @@ module.exports = {
                 ],
             },
             borderRadius: {
-                10: '10px'
+                10: '10px',
+                13: '13px',
+                30: '30px'
             },
             boxShadow: {
                 btn: '0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.3)',
@@ -91,6 +95,16 @@ module.exports = {
             },
             gridTemplateColumns: {
                 footer: 'auto minmax(0, 100%) auto'
+            },
+            fontSize: {
+                '3.3xl': '32px',
+            },
+            letterSpacing: {
+                'tight': '-0.03em',
+                'small': '-0.02em',
+            },
+            lineHeight: {
+                huge: '38px'
             }
         }
     },
