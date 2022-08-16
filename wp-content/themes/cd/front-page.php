@@ -21,7 +21,7 @@ get_header(); ?>
             <?php while (have_rows('main-banner')) : the_row(); ?>
                 <section class="mt-1 pt-11.5 h-[680px] pb-12.5 rounded-30 relative"
                          style="background-color:<?php the_sub_field('bg-color'); ?>">
-                    <div class="flex flex-col justify-between items-center relative z-20">
+                    <div class="flex flex-col justify-between items-center h-full relative z-20">
                         <div class="">
                             <p class="text-white font-bold text-center tracking-mini mb-3.5 text-huge">
                                 <?php the_sub_field('caption'); ?>
@@ -31,6 +31,14 @@ get_header(); ?>
 
                             </p>
                         </div>
+                        <?php $btn = get_sub_field('btn'); ?>
+                        <?php if ($btn) : ?>
+                            <a href="<?php echo esc_url($btn['url']); ?>"
+                               class="bg-white font-medium text-lg leading-[34px] py-3 px-9.5 rounded-full transition-all duration-300 hover:bg-stone-200"
+                               target="<?php echo esc_attr($btn['target']); ?>">
+                                <?php echo esc_html($btn['title']); ?>
+                            </a>
+                        <?php endif; ?>
                     </div>
                     <div class="absolute left-1/2 -translate-x-1/2 top-16 w-full z-10">
                         <figure>
@@ -62,7 +70,6 @@ get_header(); ?>
                             </div>
                         <?php endif; ?>
                     </div>
-
                 </section>
             <?php endwhile; ?>
         <?php endif; ?>
