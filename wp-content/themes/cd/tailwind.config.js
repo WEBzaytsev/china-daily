@@ -98,10 +98,13 @@ module.exports = {
             },
             fontSize: {
                 '3.3xl': '32px',
+                'huge': ['80px', '103.5%']
             },
             letterSpacing: {
-                'tight': '-0.03em',
-                'small': '-0.02em',
+                mini: '-0.045em',
+                tight: '-0.03em',
+                small: '-0.02em',
+                normal: '-0.01em',
             },
             lineHeight: {
                 huge: '38px'
