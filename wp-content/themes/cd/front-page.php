@@ -76,66 +76,10 @@ get_header(); ?>
         <!--End first section-->
 
         <!--Second section-->
-        <?php
-        $services_args = array(
-            'post_type' => 'service',
-            'post_per_page' => 6,
-            'orderby' => 'rand'
-        );
-        $services = query_posts($services_args);
-
-        if (have_posts()) : ?>
-            <div class="grid grid-cols-4 gap-2 grid-rows-services-list">
-                <?php
-                $service_count = 1;
-                while (have_posts()) : the_post();
-                    $post_id = $post->ID;
-                    $service_css_class = '';
-                    if ($service_count == 1) {
-                        $service_css_class = 'col-start-1 col-end-3';
-                    }
-
-                    if ($service_count == 2) {
-                        $service_css_class = 'col-start-3 col-end-5';
-                    }
-                    ?>
-                    <div class="<?php echo sprintf(
-                        '%s bg-white rounded-30 transition-all duration-300 relative hover:shadow-xl p-9 overflow-hidden group',
-                        esc_attr($service_css_class)
-                    ); ?>">
-                        <div class="relative z-20">
-                            <p class="font-semibold mb-3.5 tracking-tight leading-none text-3.3xl">
-                                <?php the_field('list-title'); ?>
-                            </p>
-                            <p class="mb-3.5 text-grey-900/50 tracking-small">
-                                <?php the_field('list-desc'); ?>
-                            </p>
-                            <a href="<?php echo get_permalink(); ?>"
-                               class="font-medium tracking-small hover:underline">
-                                Подробнее &#8594;
-                            </a>
-                        </div>
-                        <?php $list_img = get_field('list-img'); ?>
-                        <?php if ($list_img) : ?>
-                            <figure class="absolute z-10 right-0 bottom-0 w-full max-w-full">
-                                <img src="<?php echo esc_url($list_img['url']); ?>"
-                                     class="block max-w-full group-hover:scale-105 transition-all duration-300 mx-auto"
-                                     alt="<?php echo esc_attr($list_img['alt']); ?>"/>
-                            </figure>
-                        <?php endif; ?>
-                    </div>
-                    <?php
-                    $service_count++;
-                endwhile;
-                wp_reset_query(); ?>
-            </div>
-        <?php endif; ?>
+        <?php get_template_part('/template-parts/services-list'); ?>
         <!--End second section-->
 
-        <a href="#"
-           class="w-full block text-white py-9.5 bg-green-600 hover:bg-green-700 shadow-btn transition-all duration-300 font-medium text-xl tracking-small text-center rounded-30">
-            <?php esc_html_e('Оставить  заявку', 'cd'); ?>
-        </a>
+        <?php get_template_part('/template-parts/feedback-btn') ?>
 
         <!--Third section-->
         <?php if (have_rows('benefits')) : ?>
@@ -259,8 +203,12 @@ get_header(); ?>
                 wp_reset_query(); ?>
                 <div class=" shadow-block">
                     <div class="relative group bg-white pl-9 pr-6 pb-8.5 flex flex-col justify-center items-center h-full justify-end rounded-30 overflow-hidden">
-                        <a href="#" class="absolute z-30 inset-0"></a>
-                        <p class="text-[128px] text-grey-900/20 leading-none transition-all duration-300 group-hover:text-grey-900/50">+</p>
+                        <a href="<?php echo get_home_url() . '/blog'; ?>"
+                           class="absolute z-30 inset-0">
+                        </a>
+                        <p class="text-[128px] text-grey-900/20 leading-none transition-all duration-300 group-hover:text-grey-900/50">
+                            +
+                        </p>
                         <p class="font-semibold text-xl tracking-tight mt-10 group-hover:underline">
                             <?php esc_html_e('Все статьи', 'cd'); ?>
                         </p>
