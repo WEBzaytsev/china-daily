@@ -233,7 +233,42 @@ get_header(); ?>
         <?php endif; ?>
         <!--End six section-->
 
-        <!-- TODO: Blog posts -->
+        <!--Seven section-->
+        <?php
+        $posts_args = array(
+            'post_per_page' => 3,
+            'orderby' => 'rand'
+        );
+        $posts = get_posts($posts_args);
+        if (have_posts()) : ?>
+            <div class="grid grid-cols-4 gap-x-2 grid-rows-[420px]">
+                <?php while (have_posts()) : the_post(); ?>
+                    <?php $list_img = get_field('list-img'); ?>
+                    <div class=" shadow-block">
+                        <div class="relative group bg-white pl-9 pr-6 pb-8.5 flex flex-col h-full justify-end rounded-30 overflow-hidden">
+                            <a href="<?php echo get_permalink(); ?>" class="absolute z-30 inset-0"></a>
+                            <div class="absolute z-10 bg-cover bg-center inset-0 transition-all duration-300 group-hover:scale-105"
+                                 style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%),
+                                         url('<?php echo esc_url($list_img['url']); ?>');"></div>
+                            <p class="text-white font-semibold tracking-tight text-xl relative z-20 group-hover:underline">
+                                <?php the_title(); ?>
+                            </p>
+                        </div>
+                    </div>
+                <?php endwhile;
+                wp_reset_query(); ?>
+                <div class=" shadow-block">
+                    <div class="relative group bg-white pl-9 pr-6 pb-8.5 flex flex-col justify-center items-center h-full justify-end rounded-30 overflow-hidden">
+                        <a href="#" class="absolute z-30 inset-0"></a>
+                        <p class="text-[128px] text-grey-900/20 leading-none transition-all duration-300 group-hover:text-grey-900/50">+</p>
+                        <p class="font-semibold text-xl tracking-tight mt-10 group-hover:underline">
+                            <?php esc_html_e('Все статьи', 'cd'); ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+        <!--End seven section-->
     </main>
 
 <?php get_footer();
