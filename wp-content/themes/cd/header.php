@@ -30,7 +30,7 @@
     <header class="header fixed z-20 top-0 left-0 w-full bg-common-bg py-3">
         <div class="container w-full flex items-center justify-between">
             <div class="flex items-center">
-                <a href="<?php esc_url(get_home_url(), 'cd') ?>">
+                <a href="/">
                     <figure>
                         <?php $logo = get_field('logo', 'option'); ?>
                         <?php if ($logo) : ?>
