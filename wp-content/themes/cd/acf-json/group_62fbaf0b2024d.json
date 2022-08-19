@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -30,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -46,6 +46,35 @@
             "mime_types": ""
         },
         {
+            "key": "field_62fff8fee181b",
+            "label": "Цвет при наведении в списке услуг",
+            "name": "hover-color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "blue": "Синий",
+                "green": "Зеленый",
+                "red": "Красный",
+                "ochre": "Светло-коричневый",
+                "orange": "Оранжевый",
+                "grey": "Серый"
+            },
+            "default_value": "Зеленый",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_62fbb4020c6c7",
             "label": "Краткое описание в списке услуг",
             "name": "list-desc",
@@ -54,7 +83,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -438,5 +467,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660935737
+    "modified": 1660943878
 }

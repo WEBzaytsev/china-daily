@@ -23,18 +23,18 @@ if (have_posts()) : ?>
                 $service_css_class = 'col-start-3 col-end-5';
             }
             ?>
-            <div class="bg-white rounded-30 transition-all duration-300 relative hover:shadow-xl p-9 overflow-hidden group <?php echo $current_page == 'main' ? esc_attr($service_css_class) : ''; ?>">
+            <div class="bg-white rounded-30 transition-all duration-300 relative hover:shadow-xl p-9 overflow-hidden group <?php echo $current_page == 'main' ? esc_attr($service_css_class) : ''; ?> <?php echo hover_class(get_field('hover-color')); ?>">
                 <div class="relative z-20">
-                    <p class="font-semibold mb-3.5 tracking-tight leading-none text-3.3xl">
+                    <p class="font-semibold mb-3.5 tracking-tight leading-none text-3.3xl group-hover:text-white">
                         <?php the_field('list-title'); ?>
                     </p>
                     <?php if ($current_page == 'main') : ?>
-                        <p class="mb-3.5 text-grey-900/50 tracking-small">
+                        <p class="mb-3.5 text-grey-900/50 tracking-small group-hover:text-white">
                             <?php the_field('list-desc'); ?>
                         </p>
                     <?php endif; ?>
                     <a href="<?php echo get_permalink(); ?>"
-                       class="font-medium tracking-small hover:underline">
+                       class="font-medium tracking-small hover:underline group-hover:text-white">
                         Подробнее &#8594;
                     </a>
                 </div>
@@ -52,4 +52,16 @@ if (have_posts()) : ?>
         endwhile;
         wp_reset_query(); ?>
     </div>
-<?php endif; ?>
+<!--<div class="hover:bg-blue hover:bg-green-600 hover:bg-grey-600 hover:bg-orange hover:bg-ochre hover:bg-red"></div>-->
+<?php endif;
+
+function hover_class($color_name): string
+{
+    $color = $color_name;
+
+    if ($color == 'grey' || $color == 'green') {
+        $color .= '-600';
+    }
+
+    return 'hover:bg-' . $color;
+}
