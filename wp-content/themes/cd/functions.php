@@ -159,10 +159,19 @@ function cd_scripts() {
     );
 
     wp_enqueue_script(
+        'select2',
+        get_template_directory_uri() . '/js/select2.min.js',
+        array(),
+        CHINA_DAILY,
+        true
+    );
+
+    wp_enqueue_script(
         'main-script',
         get_template_directory_uri() . '/dist/js/main.js',
         array(
             'jquery',
+            'select2',
         ),
         CHINA_DAILY,
         true
