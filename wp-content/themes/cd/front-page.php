@@ -180,10 +180,11 @@ get_header(); ?>
         <!--Seven section-->
         <?php
         $posts_args = array(
-            'post_per_page' => 3,
-            'orderby' => 'rand'
+            'type' => 'post',
+            'posts_per_page' => 3,
+            'orderby' => 'rand',
         );
-        $posts = get_posts($posts_args);
+        $posts = query_posts($posts_args);
         if (have_posts()) : ?>
             <div class="grid grid-cols-4 gap-x-2 grid-rows-[420px]">
                 <?php while (have_posts()) : the_post(); ?>
