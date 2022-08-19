@@ -26,6 +26,7 @@ module.exports = {
                 '12.5': '3.125rem',
                 '13': '3.25rem',
                 '13.5': '3.375rem',
+                '14.5': '3.625rem',
                 '15': '3.75rem',
                 '16.5': '4.125rem',
                 '17.5': '4.375rem',
@@ -115,7 +116,9 @@ module.exports = {
                 huge: '38px'
             },
             gridTemplateRows: {
-                'services-list': 'repeat(2, 420px)'
+                'services-list': 'repeat(2, 420px)',
+                'blog-posts': 'repeat(3, 703px)',
+                'blog-post': '420px auto',
             }
         }
     },
