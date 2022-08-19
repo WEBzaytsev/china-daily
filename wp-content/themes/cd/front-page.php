@@ -142,22 +142,7 @@ get_header(); ?>
         <!--End four section-->
 
         <!--Five section-->
-        <?php if (have_rows('about')) : ?>
-            <?php while (have_rows('about')) : the_row(); ?>
-                <?php $img = get_sub_field('img'); ?>
-                <?php $color = get_sub_field('color'); ?>
-                <div class="pt-12.5 pl-9 h-[600px] bg-white rounded-30 bg-cover text-white"
-                     style="background:linear-gradient(100.94deg, rgba(<?php echo formatColor($color); ?> 1) 32.74%, rgba(<?php echo formatColor($color); ?> 0) 60.15%),
-                             url('<?php echo esc_url($img['url']); ?>') no-repeat center;">
-                    <p class="font-semibold tracking-tight text-5xl leading-[58px] mb-12">
-                        <?php the_sub_field('caption'); ?>
-                    </p>
-                    <p class="font-medium text-xl">
-                        <?php the_sub_field('text'); ?>
-                    </p>
-                </div>
-            <?php endwhile; ?>
-        <?php endif; ?>
+        <?php get_template_part('/template-parts/text-img-gradient-block', null, array('selector' => 'about')); ?>
         <!--End five section-->
 
         <!--Six section-->
@@ -221,16 +206,3 @@ get_header(); ?>
     </main>
 
 <?php get_footer();
-
-function formatColor($rgba_color_array): string
-{
-    $i = 1;
-    return trim(array_reduce($rgba_color_array, function ($carry, $item) use ($rgba_color_array, &$i) {
-        if ($i >= count($rgba_color_array)) {
-            return $carry;
-        }
-
-        $i++;
-        return $carry .= $item . ', ';
-    }));
-}
