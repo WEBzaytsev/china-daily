@@ -22,6 +22,8 @@ $cats_args = array(
 );
 $cats = get_categories($cats_args);
 
+$posts_count = (int)wp_count_posts()->publish;
+
 get_header();
 ?>
     <main class="relative z-10 container mb-4 grid gap-y-4 blog-page">
