@@ -83,6 +83,88 @@
             "append": ""
         },
         {
+            "key": "field_62fccaf6cb9d1",
+            "label": "Юр.адрес",
+            "name": "legal-address",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62fccb19cb9d2",
+            "label": "ИНН",
+            "name": "inn",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_62fccb32cb9d3",
+            "label": "КПП",
+            "name": "kpp",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_62fccb3fcb9d4",
+            "label": "ОГРН",
+            "name": "ogrn",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
             "key": "field_62fa382f3335b",
             "label": "График работы",
             "name": "schedulle",
@@ -203,5 +285,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660565864
+    "modified": 1660734384
 }
