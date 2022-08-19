@@ -8,7 +8,7 @@ $posts_search = $_GET['q'] ?? '';
 $posts_page = $_GET['pg'] ?? 1;
 $posts_args = array(
     'post_type' => 'post',
-    'posts_per_page' => 4,
+    'posts_per_page' => 9,
     'orderby' => 'date',
     's' => $posts_search,
     'category_name' => $posts_cat == 'all' ? '' : $posts_cat,
@@ -46,7 +46,7 @@ get_header();
         </form>
 
         <?php if (count($posts)) : ?>
-            <div class="grid grid-cols-3 gap-x-2 gap-y-4 grid-rows-[703px]">
+            <div class="grid grid-cols-3 gap-x-2 gap-y-4 grid-rows-[703px] posts-container">
                 <?php while (have_posts()) : the_post(); ?>
                     <?php $list_img = get_field('list-img'); ?>
                     <div class="group shadow-block">
