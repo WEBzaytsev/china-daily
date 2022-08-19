@@ -96,6 +96,8 @@ get_header();
             </div>
         <?php endif; ?>
 
+        <?php get_template_part('/template-parts/services-list'); ?>
+
         <?php get_template_part('/template-parts/feedback-btn') ?>
     </main>
 
