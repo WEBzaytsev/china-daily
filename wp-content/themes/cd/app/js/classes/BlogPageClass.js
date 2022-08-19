@@ -10,20 +10,18 @@ export const BlogPageClass = function ($, page) {
     this.select = this.page.find('select#cat');
     this.contentWrap = $('.posts-container');
     this.resetBtn = $('button.posts-reset');
-    this.params = {
-        cat: '',
-        q: '',
-        pg: 1,
-    }
+    this.params = new Proxy({}, {
+        async set(obj, prop, value) {
+            obj[prop] = value;
+            await _this.updateContent();
+            return true;
+        },
+    });
 
     this.reset = function () {
-        _this.params = {
-            cat: '',
-            q: '',
-            pg: 1,
+        for (let key of Object.keys(_this.params)) {
+            _this.params[key] = '';
         }
-
-        _this.updateContent();
     }
 
     this.setSelect = () => {
@@ -37,12 +35,10 @@ export const BlogPageClass = function ($, page) {
 
     this.handleInput = function () {
         _this.params.q = $(this).val();
-        _this.updateContent();
     }
 
     this.handleSelect = function () {
         _this.params.cat = $(this).val();
-        _this.updateContent();
     }
 
     this.updateContent = async () => {
@@ -66,10 +62,8 @@ export const BlogPageClass = function ($, page) {
     this.setState = () => {
         const url = new URL(window.location.href);
         const params = url.searchParams;
-        for (const [key, value] of params.entries()) {
-            if (_this.params[key]) {
-                _this.params[key] = value;
-            }
+        for (const key of params.keys()) {
+            _this.params[key] = params.get(key);
         }
     }
 
