@@ -27,6 +27,6 @@ function formatColor($rgba_color_array): string
         }
 
         $i++;
-        return $carry .= $item . ', ';
+        return $carry . $item . ', ';
     }));
 }
