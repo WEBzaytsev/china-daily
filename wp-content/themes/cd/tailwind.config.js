@@ -119,6 +119,9 @@ module.exports = {
                 'services-list': 'repeat(2, 420px)',
                 'blog-posts': 'repeat(3, 703px)',
                 'blog-post': '420px auto',
+            },
+            minHeight: {
+                300: '300px',
             }
         }
     },
