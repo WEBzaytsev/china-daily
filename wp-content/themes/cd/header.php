@@ -24,7 +24,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-common-bg font-inter pt-[73px]'); ?>>
+<body <?php body_class('bg-common-bg font-inter pt-[73px] text-grey-900'); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="">
     <header class="header fixed z-20 top-0 left-0 w-full bg-common-bg py-3">
