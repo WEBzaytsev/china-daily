@@ -9,10 +9,21 @@ export const BlogPageClass = function ($, page) {
     this.input = this.page.find('input#search');
     this.select = this.page.find('select#cat');
     this.contentWrap = $('.posts-container');
+    this.resetBtn = $('button.posts-reset');
     this.params = {
         cat: '',
         q: '',
-        // pg: 1,
+        pg: 1,
+    }
+
+    this.reset = function () {
+        _this.params = {
+            cat: '',
+            q: '',
+            pg: 1,
+        }
+
+        _this.updateContent();
     }
 
     this.setSelect = () => {
@@ -70,5 +81,6 @@ export const BlogPageClass = function ($, page) {
         this.setSelect();
         this.setState();
         this.input.on('input', debounce(this.handleInput, 500));
+        this.resetBtn.on('click', this.reset);
     }
 }

@@ -29,7 +29,7 @@ get_header();
     <main class="relative z-10 container mb-4 grid gap-y-4 blog-page">
         <?php get_template_part('/template-parts/main-banner'); ?>
 
-        <form class="grid grid-cols-[repeat(2,_394px)] gap-x-2">
+        <form class="grid grid-cols-3 gap-x-2">
             <label for="search" class="block w-full">
                 <input type="text"
                        placeholder="<?php esc_attr_e('Поиск по статьям', 'cd'); ?>"
@@ -45,30 +45,40 @@ get_header();
                     <?php endforeach; ?>
                 </select>
             </label>
+            <button type="reset"
+                    class="w-full block text-white bg-green-600 hover:bg-green-700 shadow-btn transition-all duration-300 font-medium text-xl tracking-small text-center rounded-10 posts-reset">
+                <?php esc_html_e('Сбросить'); ?>
+            </button>
         </form>
 
-        <?php if (count($posts)) : ?>
-            <div class="grid grid-cols-3 gap-x-2 gap-y-4 grid-rows-[703px] posts-container">
-                <?php while (have_posts()) : the_post(); ?>
-                    <?php $list_img = get_field('list-img'); ?>
-                    <div class="group shadow-block">
-                        <div class="rounded-30 bg-white h-full overflow-hidden">
-                            <div class="relative pl-9 pr-6 pb-14.5 flex flex-col h-[420px] overflow-hidden justify-end">
-                                <div class="absolute z-10 bg-cover bg-center inset-0 transition-all duration-300 group-hover:scale-105"
-                                     style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%),
-                                             url('<?php echo esc_url($list_img['url']); ?>');"></div>
-                                <p class="text-white font-semibold tracking-tight text-xl relative z-20 group-hover:underline">
-                                    <?php the_title(); ?>
-                                </p>
+        <div class="posts-container">
+            <?php if (count($posts)) : ?>
+                <div class="grid grid-cols-3 gap-x-2 gap-y-4 grid-rows-blog-posts">
+                    <?php while (have_posts()) : the_post();
+                        $post_cat_ID = wp_get_post_categories($post->ID)[0];
+                        $post_cat = get_the_category_by_ID($post_cat_ID);
+                        ?>
+
+                        <?php $list_img = get_field('list-img'); ?>
+                        <div class="group shadow-block">
+                            <div class="rounded-30 bg-white h-full overflow-hidden">
+                                <div class="relative pl-9 pr-6 pb-14.5 flex flex-col h-[420px] overflow-hidden justify-end">
+                                    <div class="absolute z-10 bg-cover bg-center inset-0 transition-all duration-300 group-hover:scale-105"
+                                         style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%),
+                                                 url('<?php echo esc_url($list_img['url']); ?>');"></div>
+                                    <p class="text-white font-semibold tracking-tight text-xl relative z-20 group-hover:underline">
+                                        <?php esc_html_e($post_cat); ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php endwhile;
-                wp_reset_query(); ?>
-            </div>
-        <?php else : ?>
-            <p>Ничего не найдено</p>
-        <?php endif; ?>
+                    <?php endwhile;
+                    wp_reset_query(); ?>
+                </div>
+            <?php else : ?>
+                <p>Ничего не найдено</p>
+            <?php endif; ?>
+        </div>
     </main>
 
 <?php
