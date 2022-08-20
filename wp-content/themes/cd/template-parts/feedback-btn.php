@@ -6,6 +6,6 @@ $default_classes = 'w-full block text-white py-9.5 bg-green-600 hover:bg-green-7
 <button type="button"
         data-bs-toggle="modal"
         data-bs-target="#exampleModalCenteredScrollable"
-        class="<?php esc_attr_e($css ? $css : $default_classes); ?>">
+        class="<?php esc_attr_e($css ?: $default_classes); ?>">
     <?php esc_html_e('Оставить  заявку', 'cd'); ?>
 </button>
