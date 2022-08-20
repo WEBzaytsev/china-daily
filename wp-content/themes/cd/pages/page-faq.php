@@ -9,6 +9,8 @@ get_header();
     <main class="relative z-10 container grid gap-y-4 mb-4">
         <?php get_template_part('/template-parts/main-banner'); ?>
 
+        <?php get_template_part('/template-parts/breadcrumbs'); ?>
+
         <?php if (have_rows('questions')) : ?>
             <div class="accordion grid gap-y-2"
                  id="accordionExample5">

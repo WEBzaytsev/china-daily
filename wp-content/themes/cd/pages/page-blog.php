@@ -29,6 +29,8 @@ get_header();
     <main class="relative z-10 container mb-4 grid gap-y-4 blog-page">
         <?php get_template_part('/template-parts/main-banner'); ?>
 
+        <?php get_template_part('/template-parts/breadcrumbs'); ?>
+
         <form class="grid grid-cols-3 gap-x-2 mb-8">
             <label for="search" class="block w-full">
                 <input type="text"

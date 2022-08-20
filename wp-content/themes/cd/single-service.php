@@ -13,6 +13,8 @@ get_header();
     <main class="relative z-10 container grid gap-y-4 mb-4">
         <?php get_template_part('/template-parts/main-banner'); ?>
 
+        <?php get_template_part('/template-parts/breadcrumbs'); ?>
+
         <?php if (have_rows('first-block')) : ?>
             <?php while (have_rows('first-block')) : the_row();
 
