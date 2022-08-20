@@ -14,7 +14,7 @@
 <footer class="footer relative z-10 container pb-24">
     <?php get_template_part('/template-parts/form'); ?>
     <div class="grid grid-cols-footer items-start mt-4 pt-5">
-        <div class="font-medium text-grey-900/50">
+        <div class="font-medium text-sm text-grey-900/50 max-w-[200px]">
             <p class="mb-5">
                 <?php the_field('copyright', 'option'); ?>
             </p>
@@ -37,9 +37,9 @@
                 array(
                     'theme_location' => 'footer-menu',
                     'menu_id' => 'footer-menu',
-                    'container_class' => '',
+                    'container_class' => 'ml-[114px]',
                     'menu_class' => 'flex flex-col gap-y-4.5 max-h-[140px] flex-wrap',
-                    'add_li_class' => 'relative w-fit before:block before:absolute before:bg-grey-900 before:bottom-0 before:left-1/2 before:w-full before:max-w-0 before:h-px before:-translate-x-1/2 before:transition-all before:duration-300 hover:before:max-w-full mr-8 last:mr-0',
+                    'add_li_class' => 'relative w-fit before:block before:absolute before:bg-grey-900 before:bottom-0 before:left-1/2 before:w-full before:max-w-0 before:h-px before:-translate-x-1/2 before:transition-all before:duration-300 hover:before:max-w-full',
                     'link_class' => 'font-medium'
                 )
             );

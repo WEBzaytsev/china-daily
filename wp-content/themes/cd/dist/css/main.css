@@ -3943,6 +3943,8 @@ video {
   margin-left: auto;
 }.mr-3\.5 {
   margin-right: 0.875rem;
+}.ml-\[114px\] {
+  margin-left: 114px;
 }.box-content {
   box-sizing: content-box;
 }.block {
@@ -3992,6 +3994,8 @@ video {
   max-width: 600px;
 }.max-w-full {
   max-width: 100%;
+}.max-w-\[200px\] {
+  max-width: 200px;
 }.grow {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -4324,6 +4328,9 @@ video {
 }.text-5xl {
   font-size: 3rem;
   line-height: 1;
+}.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }.font-medium {
   font-weight: 500;
 }.font-bold {
