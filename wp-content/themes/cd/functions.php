@@ -159,6 +159,14 @@ function cd_scripts() {
     );
 
     wp_enqueue_script(
+        'validate',
+        get_template_directory_uri() . '/js/jquery.validate.min.js',
+        array(),
+        CHINA_DAILY,
+        true
+    );
+
+    wp_enqueue_script(
         'select2',
         get_template_directory_uri() . '/js/select2.min.js',
         array(),
@@ -172,6 +180,7 @@ function cd_scripts() {
         array(
             'jquery',
             'select2',
+            'validate',
         ),
         CHINA_DAILY,
         true

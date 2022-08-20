@@ -43,7 +43,7 @@ export const BlogPageClass = function ($, page) {
 
     this.updateContent = async () => {
         const url = new URL(window.location.href);
-        const data = await api(`${url.origin}${url.pathname}`, _this.params);
+        const data = await api.getData(`${url.origin}${url.pathname}`, _this.params);
 
         if (await data) {
             _this.contentWrap.html($(data).find('.posts-container').html());

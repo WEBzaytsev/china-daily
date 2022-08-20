@@ -3,7 +3,10 @@ $is_modal = $args['is-modal'] ?? false;
 $input_class = 'block w-full px-4.5 py-2.5 border border-solid border-grey-400 focus:border-grey-600 rounded-13 font-medium placeholder:text-grey-600 tracking-small leading-huge';
 ?>
 
-<form class="bg-white rounded-30 pb-16.5 pt-17.5 px-13 w-full">
+<form class="bg-white rounded-30 pb-16.5 pt-17.5 px-13 w-full feedback-form"
+      method="post">
+    <?php wp_nonce_field() ?>
+    <input type="hidden" name="_wpcf7" value="<?php esc_attr_e(6); ?>">
     <div class="mb-12 flex items-center justify-between">
         <div>
             <p class="font-semibold text-3.3xl tracking-tight -mb-2">
@@ -30,7 +33,7 @@ $input_class = 'block w-full px-4.5 py-2.5 border border-solid border-grey-400 f
     </div>
 
     <div class="flex items-stretch">
-        <div class="grid grid-cols-2 gap-x-2 gap-y-6 grow">
+        <div class="grid grid-cols-2 gap-x-2 gap-y-6 grow relative">
             <div class="grid gap-y-2">
                 <label for="feedback-name" class="block w-full">
                     <input type="text"
@@ -40,7 +43,7 @@ $input_class = 'block w-full px-4.5 py-2.5 border border-solid border-grey-400 f
                            class="<?php esc_attr_e($input_class); ?>">
                 </label>
                 <label for="feedback-phone" class="block w-full">
-                    <input type="text"
+                    <input type="tel"
                            id="feedback-phone"
                            name="feedback-phone"
                            placeholder="Телефон"
@@ -65,6 +68,7 @@ $input_class = 'block w-full px-4.5 py-2.5 border border-solid border-grey-400 f
                     class="col-start-1 col-end-3 bg-grey-900 rounded-13 text-center text-white tracking-small font-medium leading-huge py-2.5 shadow-btn transition-all duration-300 hover:bg-zinc-800">
                 <?php esc_html_e('Отправить', 'cd'); ?>
             </button>
+            <p class="absolute text-center -bottom-8 w-full left-0 form-note font-semibold"></p>
         </div>
         <?php if (!$is_modal) : ?>
             <div class="ml-18.5 flex flex-col justify-between">
