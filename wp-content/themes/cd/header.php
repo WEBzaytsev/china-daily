@@ -59,12 +59,12 @@
                     <?php the_field('phone', 'option'); ?>
                 </a>
                 <?php get_template_part('/template-parts/socials', null, array('icon-size' => 40)); ?>
-                <a href="#"
-                   class="px-5 py-3 bg-green-600 text-white font-medium text-[15px] rounded-10 shadow-btn transition-all duration-300 hover:bg-green-700">
-                    <span class="">
-                        <?php esc_html_e('Оставить  заявку', 'cd'); ?>
-                    </span>
-                </a>
+
+                <?php get_template_part(
+                    '/template-parts/feedback-btn',
+                    null,
+                    array('css-classes' => 'px-5 py-3 bg-green-600 text-white font-medium text-[15px] rounded-10 shadow-btn transition-all duration-300 hover:bg-green-700')
+                ); ?>
             </div>
         </div>
     </header>

@@ -1,6 +1,7 @@
 'use strict';
 
 import 'tw-elements/dist/src/js/bs/src/collapse';
+import 'tw-elements/dist/src/js/bs/src/modal';
 import {BlogPageClass} from "./classes/BlogPageClass";
 
 (function($) {
