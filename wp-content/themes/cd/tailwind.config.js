@@ -60,6 +60,7 @@ module.exports = {
             colors: {
                 'common-bg': '#F0F4FD',
                 grey: {
+                    200: '#C4C4C4',
                     300: '#E5E5E5',
                     400: '#D5D5D5',
                     600: '#A0A0A0',
