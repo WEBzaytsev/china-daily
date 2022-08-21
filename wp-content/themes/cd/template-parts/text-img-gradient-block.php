@@ -17,16 +17,3 @@ if (have_rows($block_selector)) : ?>
         </div>
     <?php endwhile; ?>
 <?php endif;
-
-function formatColor($rgba_color_array): string
-{
-    $i = 1;
-    return trim(array_reduce($rgba_color_array, function ($carry, $item) use ($rgba_color_array, &$i) {
-        if ($i >= count($rgba_color_array)) {
-            return $carry;
-        }
-
-        $i++;
-        return $carry . $item . ', ';
-    }));
-}
