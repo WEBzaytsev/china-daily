@@ -22,6 +22,9 @@ $post_cat = get_the_category_by_ID($post_cat_ID);
                 <p class="font-semibold tracking-tight text-2.9xl leading-huge mb-3.5 group-hover:underline">
                     <?php the_title(); ?>
                 </p>
+                <p class="font-medium tracking-small text-grey-900/60">
+                    <?php the_field( 'short_desc' ); ?>
+                </p>
             </div>
             <p class="hover:underline font-medium tracking-small">
                 <?php esc_html_e('Подробнее →'); ?>
