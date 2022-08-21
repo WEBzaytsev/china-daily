@@ -3,23 +3,6 @@
     "title": "Статья",
     "fields": [
         {
-            "key": "field_62fcc884c17df",
-            "label": "Цвет",
-            "name": "color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#557AFF",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
             "key": "field_62fcc80bc17dd",
             "label": "Картинка для списка статей",
             "name": "list-img",
@@ -28,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -44,28 +27,23 @@
             "mime_types": ""
         },
         {
-            "key": "field_62fcc832c17de",
-            "label": "Главная картинка",
-            "name": "main-img",
-            "type": "image",
+            "key": "field_630258fec943f",
+            "label": "Краткий текст для списка статей",
+            "name": "short_desc",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
         }
     ],
     "location": [
@@ -86,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660733817
+    "modified": 1661098284
 }

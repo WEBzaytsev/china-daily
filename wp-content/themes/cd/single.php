@@ -10,31 +10,37 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+    <main class="relative z-10 container grid gap-y-4 mb-4">
+        <?php get_template_part('/template-parts/main-banner'); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+        <?php get_template_part('/template-parts/breadcrumbs'); ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+        <?php
+        while (have_posts()) :
+            the_post();
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'cd' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'cd' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+            the_content();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+        endwhile;
+        ?>
 
-		endwhile; // End of the loop.
-		?>
+        <div class="bg-orange rounded-15 w-full px-7 py-3 text-white font-semibold">
+            <?php esc_html_e('Читайте также'); ?>
+        </div>
 
-	</main><!-- #main -->
+        <?php
+        $posts_args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 3,
+            'orderby' => 'rand',
+        );
+        $posts = query_posts($posts_args);
+        ?>
+
+        <?php if (count($posts)) {
+            get_template_part('/template-parts/posts-list', null, array('posts' => $posts));
+        } ?>
+    </main>
 
 <?php
-get_sidebar();
 get_footer();
