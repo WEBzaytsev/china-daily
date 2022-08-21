@@ -322,3 +322,8 @@ function formatColor($rgba_color_array): string
         return $carry . $item . ', ';
     }));
 }
+
+function set_rows($items_count, $items_in_row): int
+{
+    return ceil($items_count / $items_in_row);
+}

@@ -119,7 +119,10 @@ module.exports = {
             },
             gridTemplateRows: {
                 'services-list': 'repeat(2, 420px)',
-                'blog-posts': 'repeat(3, 703px)',
+                'blog-posts-3': 'repeat(3, 703px)',
+                'blog-posts-2': 'repeat(2, 703px)',
+                'blog-posts-1': '703px',
+                'blog-posts-one-row': '703px',
                 'blog-post': '420px auto',
             },
             minHeight: {
