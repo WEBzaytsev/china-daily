@@ -88,6 +88,7 @@ module.exports = {
             borderRadius: {
                 10: '10px',
                 13: '13px',
+                15: '15px',
                 20: '20px',
                 30: '30px'
             },
@@ -103,6 +104,7 @@ module.exports = {
                 footer: 'auto minmax(0, 100%) auto'
             },
             fontSize: {
+                '2.6xl': '26px',
                 '2.9xl': '28px',
                 '3.3xl': '32px',
                 '5.3xl': ['52px', '63px'],
@@ -118,7 +120,6 @@ module.exports = {
                 huge: '38px'
             },
             gridTemplateRows: {
-                'services-list': 'repeat(2, 420px)',
                 'blog-posts-3': 'repeat(3, 703px)',
                 'blog-posts-2': 'repeat(2, 703px)',
                 'blog-posts-1': '703px',

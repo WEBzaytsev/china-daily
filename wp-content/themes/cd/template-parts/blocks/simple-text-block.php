@@ -31,7 +31,7 @@ $text_color = get_field('text_color');
 
 ?>
 <div id="<?php echo esc_attr($id); ?>"
-     class="<?php echo esc_attr($className); ?> rounded-30 p-9 font-base color-black">
+     class="<?php echo esc_attr($className); ?> rounded-30 md:px-9 md:py-9 py-5 px-3 font-base color-black">
     <div>
         <?php echo $text; ?>
     </div>

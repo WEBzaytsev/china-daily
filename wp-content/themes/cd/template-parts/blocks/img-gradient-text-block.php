@@ -60,5 +60,18 @@ $text_color = get_field('text_color');
         <?php echo '.' . $className . '-content'; ?> {
             max-width: <?php echo $text_width; ?>%;
         }
+        @media (max-width: 768px) {
+            <?php echo '#' . $id; ?> {
+                background: linear-gradient(
+                        129.26deg,
+                        rgba(<?php echo formatColor($gradient_color); ?> 1) 54.29%,
+                        rgba(<?php echo formatColor($gradient_color); ?> 0) 95.99%
+                ),
+                url("<?php echo $background_image; ?>") no-repeat center;
+            }
+            <?php echo '.' . $className . '-content'; ?> {
+                max-width: unset;
+            }
+        }
     </style>
 </div>

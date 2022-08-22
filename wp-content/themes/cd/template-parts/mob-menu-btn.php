@@ -1,0 +1,3 @@
+<div class="relative z-20 w-5 h-3 flex items-center justify-between relative before:absolute after:absolute before:block after:block before:w-full after:w-full before:left-1/2 after:left-1/2 before:-translate-x-1/2 after:-translate-x-1/2 before:h-0.5 after:h-0.5 before:bg-black after:bg-black before:bottom-0 after:top-0 before:transition-all after:transition-all before:duration-300 after:duration-300 mob-menu-btn mr-4">
+    <div class="mob-menu-btn__inner block w-full bg-black transition-all h-0.5 duration-300"></div>
+</div>

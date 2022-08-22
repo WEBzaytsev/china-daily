@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-    <main class="relative z-10 container grid gap-y-4 mb-4">
+    <main class="relative z-10 container grid md:gap-y-4 gap-y-3 mb-4">
         <?php get_template_part('/template-parts/main-banner'); ?>
 
         <?php get_template_part('/template-parts/breadcrumbs'); ?>

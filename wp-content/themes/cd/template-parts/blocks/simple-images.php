@@ -9,13 +9,11 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-// Create id attribute allowing for custom "anchor" value.
 $id = 'simple-images-' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
-// Create class attribute allowing for custom "className" and "align" values.
 $className = 'simple-images';
 if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
@@ -31,7 +29,7 @@ $images_count = count($images);
 ?>
 
 <div id="<?php echo esc_attr($id); ?>"
-     class="<?php echo esc_attr($className); ?> grid grid-cols-<?php echo $images_count; ?> gap-x-2">
+     class="<?php echo esc_attr($className); ?> grid md:grid-cols-<?php echo $images_count; ?> gap-2">
     <?php if (have_rows('images')) : ?>
         <?php while (have_rows('images')) : the_row(); ?>
             <figure class="rounded-30 overflow-hidden flex items-center justify-center">

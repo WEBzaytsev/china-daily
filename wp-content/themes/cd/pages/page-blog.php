@@ -26,12 +26,12 @@ $posts_count = (int)wp_count_posts()->publish;
 
 get_header();
 ?>
-    <main class="relative z-10 container mb-4 grid gap-y-4 blog-page">
+    <main class="relative z-10 container mb-4 grid md:gap-y-4 gap-y-3 blog-page">
         <?php get_template_part('/template-parts/main-banner'); ?>
 
         <?php get_template_part('/template-parts/breadcrumbs'); ?>
 
-        <form class="grid grid-cols-3 gap-x-2 mb-8">
+        <form class="grid md:grid-cols-3 gap-x-2 gap-y-2.5 mb-8">
             <label for="search" class="block w-full">
                 <input type="text"
                        placeholder="<?php esc_attr_e('Поиск по статьям', 'cd'); ?>"
@@ -48,7 +48,7 @@ get_header();
                 </select>
             </label>
             <button type="reset"
-                    class="w-full block text-white bg-green-600 hover:bg-green-700 shadow-btn transition-all duration-300 font-medium text-xl tracking-small text-center rounded-10 posts-reset">
+                    class="w-full md:h-auto h-[46px] block text-white bg-green-600 hover:bg-green-700 shadow-btn transition-all duration-300 font-medium text-xl tracking-small text-center rounded-10 posts-reset">
                 <?php esc_html_e('Сбросить'); ?>
             </button>
         </form>

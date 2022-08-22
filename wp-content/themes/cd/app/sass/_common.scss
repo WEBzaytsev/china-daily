@@ -4,11 +4,20 @@
     @apply max-w-screen-xl
     w-full
     lg:px-10
-    px-5
+    md:px-5
+    px-2.5
     mx-auto;
   }
 
   body .modal-dialog {
     @apply container;
+  }
+
+  .main-banner-subcaption {
+
+    br {
+      @apply md:block
+      hidden;
+    }
   }
 }

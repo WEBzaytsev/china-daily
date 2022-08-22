@@ -10,19 +10,16 @@
 get_header();
 ?>
 
-    <main class="relative z-10 container grid gap-y-4 mb-4">
+    <main class="relative z-10 container grid md:gap-y-4 gap-y-3 mb-4">
         <?php get_template_part('/template-parts/main-banner'); ?>
 
         <?php get_template_part('/template-parts/breadcrumbs'); ?>
 
-        <?php
-        while (have_posts()) :
+        <?php while (have_posts()) {
             the_post();
 
             the_content();
-
-        endwhile;
-        ?>
+        } ?>
 
         <div class="bg-orange rounded-15 w-full px-7 py-3 text-white font-semibold">
             <?php esc_html_e('Читайте также'); ?>

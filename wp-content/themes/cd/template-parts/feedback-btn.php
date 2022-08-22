@@ -1,6 +1,6 @@
 <?php
 $css = $args['css-classes'] ?? '';
-$default_classes = 'w-full block text-white py-9.5 bg-green-600 hover:bg-green-700 shadow-btn transition-all duration-300 font-medium text-xl tracking-small text-center rounded-30';
+$default_classes = 'w-full block text-white md:py-9.5 py-5.5 bg-green-600 hover:bg-green-700 shadow-btn transition-all duration-300 font-medium text-xl tracking-small text-center rounded-30';
 ?>
 
 <button type="button"

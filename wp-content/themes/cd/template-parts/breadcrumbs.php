@@ -1,6 +1,6 @@
 <?php $current_post_type = get_post_type(); ?>
 
-<div class="flex font-semibold my-4">
+<div class="flex font-semibold md:my-4 my-2">
     <a href="/" class="underline hover:no-underline">
         <?php esc_html_e('Главная'); ?>
     </a>
