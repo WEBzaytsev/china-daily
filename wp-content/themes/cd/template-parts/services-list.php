@@ -3,7 +3,6 @@ $current_page = $args['page'] ?? 'main';
 $services_args = array(
     'post_type' => 'service',
     'post_per_page' => 6,
-    'orderby' => 'rand',
     'post__not_in' => array(get_the_ID()),
 );
 $services = query_posts($services_args);
