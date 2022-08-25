@@ -59,8 +59,8 @@ get_header();
                 <?php while (have_rows('links')) : the_row(); ?>
                     <div class="rounded-20 py-6 pl-6 pr-2 group relative min-h-[124px] md:block flex items-center"
                          style="background-color: <?php the_sub_field('color'); ?>;">
-                        <a href="<?php the_sub_field('url'); ?>"
-                           class="absolute inset-0 z-20"></a>
+                        <!--<a href="<?php /*the_sub_field('url'); */?>"
+                           class="absolute inset-0 z-20"></a>-->
                         <p class="text-white tracking-tight md:text-2.9xl text-2xl font-semibold leading-huge relative z-10 group-hover:underline">
                             <?php the_sub_field('text'); ?>
                         </p>
