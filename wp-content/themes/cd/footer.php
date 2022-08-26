@@ -14,22 +14,8 @@
 <footer class="footer relative z-10 container pb-24">
     <?php get_template_part('/template-parts/form'); ?>
     <div class="grid md:grid-cols-footer items-start mt-4 pt-5">
-        <div class="font-medium text-sm text-grey-900/50 max-w-[200px] md:order-1 order-2 md:mb-0 mb-11">
-            <p class="mb-5">
-                <?php the_field('copyright', 'option'); ?>
-            </p>
-            <p class="mb-5">
-                Юр.адрес: <?php the_field('legal-address', 'option'); ?>
-            </p>
-            <p>
-                ИНН: <?php the_field('inn', 'option'); ?>
-            </p>
-            <p>
-                КПП: <?php the_field('kpp', 'option'); ?>
-            </p>
-            <p>
-                ОГРН: <?php the_field('ogrn', 'option'); ?>
-            </p>
+        <div class="font-medium text-sm max-w-[200px] md:order-1 order-2 md:mb-0 mb-11 xxx">
+            <?php echo __(get_field('footer-info', 'option')); ?>
         </div>
         <?php
         if (has_nav_menu('footer-menu')) {

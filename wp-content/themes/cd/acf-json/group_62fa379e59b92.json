@@ -248,23 +248,23 @@
             ]
         },
         {
-            "key": "field_62fa39573e93d",
-            "label": "Copyright",
-            "name": "copyright",
-            "type": "text",
+            "key": "field_6308929a1bdc5",
+            "label": "Информационный блок в футере",
+            "name": "footer-info",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -285,5 +285,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660734384
+    "modified": 1661502672
 }
