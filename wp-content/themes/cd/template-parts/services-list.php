@@ -23,6 +23,7 @@ if (have_posts()) : ?>
             }
             ?>
             <div class="bg-white md:h-[420px] h-[293px] rounded-30 transition-all duration-300 relative hover:shadow-xl md:py-9 md:px-9 py-5 px-3 overflow-hidden group <?php echo $current_page == 'main' ? esc_attr($service_css_class) : ''; ?> <?php echo hover_class(get_field('hover-color')); ?>">
+                <a href="<?php echo get_permalink(); ?>" class="absolute inset-0 z-30"></a>
                 <div class="relative z-20">
                     <p class="font-semibold md:mb-3.5 mb-1.5 tracking-tight leading-none md:text-3.3xl text-2.6xl group-hover:text-white">
                         <?php the_field('list-title'); ?>
@@ -32,10 +33,9 @@ if (have_posts()) : ?>
                             <?php the_field('list-desc'); ?>
                         </p>
                     <?php endif; ?>
-                    <a href="<?php echo get_permalink(); ?>"
-                       class="font-medium tracking-small hover:underline group-hover:text-white">
-                        Подробнее &#8594;
-                    </a>
+                    <p class="font-medium tracking-small hover:underline group-hover:text-white">
+                        <?php esc_html_e('Подробнее &#8594;'); ?>
+                    </p>
                 </div>
                 <?php $list_img = get_field('list-img'); ?>
                 <?php if ($list_img) : ?>
