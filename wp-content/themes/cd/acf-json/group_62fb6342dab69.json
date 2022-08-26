@@ -114,7 +114,7 @@
                             "key": "field_62fb643960f07",
                             "label": "Описание",
                             "name": "desc",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -125,9 +125,9 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": "br"
                         }
                     ]
                 },
@@ -488,5 +488,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660685967
+    "modified": 1661519777
 }

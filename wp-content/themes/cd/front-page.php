@@ -46,7 +46,7 @@ get_header(); ?>
                                  alt="delivery">
                         </figure>
                         <?php if (have_rows('metrics')) : ?>
-                            <div class="grid grid-cols-3 md:gap-x-[90px] gap-x-[24px] absolute md:bottom-[30%] bottom-[26%] md:left-[18%] left-[12%] lg:max-w-[600px] md:max-w-[400px] max-w-[63%]">
+                            <div class="flex justify-between w-full absolute md:bottom-[30%] bottom-[26%] md:left-[18%] left-[12%] lg:max-w-[600px] md:max-w-[400px] max-w-[63%]">
                                 <?php while (have_rows('metrics')) : the_row(); ?>
                                     <div class="relative">
                                         <div class="absolute md:opacity-70 left-0 top-0 md:mix-blend-overlay">
