@@ -50,6 +50,10 @@
                           fill="#FF0000"/>
                 </svg>
             </div>
+            <div class="flex items-center">
+                <a target="_blank" class="mr-3" href="https://webzaytsev.ru/"><?php esc_html_e('with webzaytsev', 'cd'); ?></a>
+                <svg width="37" height="37" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.9 395.79"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#528cff;}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="cls-1" d="M-20.48,160.78h366.4a0,0,0,0,1,0,0V165a66.83,66.83,0,0,1-66.83,66.83H-87.31a0,0,0,0,1,0,0V227.6a66.83,66.83,0,0,1,66.83-66.83Z" transform="translate(-105.53 185.95) rotate(-54.1)"/><path class="cls-2" d="M115.81,164h366.4a0,0,0,0,1,0,0v4.23A66.83,66.83,0,0,1,415.38,235H49a0,0,0,0,1,0,0v-4.23A66.83,66.83,0,0,1,115.81,164Z" transform="translate(582.92 101.29) rotate(125.9)"/></g></g></svg>
+            </div>
         </div>
     </div>
 </footer>
