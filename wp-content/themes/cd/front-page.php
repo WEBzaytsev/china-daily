@@ -114,7 +114,7 @@ get_header(); ?>
                 <?php
                 $scheme_item_count = 1;
                 while (have_rows('scheme')) : the_row(); ?>
-                    <div class="relative bg-white md:min-h-[432px] min-h-[293px] rounded-30 overflow-hidden shadow-block pt-9 pl-11.5 pr-4">
+                    <div class="relative bg-white md:min-h-[432px] min-h-[293px] rounded-30 overflow-hidden shadow-block pt-9 pl-11.5 pr-4 pb-2">
                         <div class="relative z-20">
                             <span class="block w-12 h-12 rounded-full border-2 border-solid border-black/10 flex items-center justify-center mb-3.5">
                                 <?php esc_html_e($scheme_item_count); ?>

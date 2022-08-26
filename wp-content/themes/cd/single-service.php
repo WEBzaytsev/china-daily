@@ -61,7 +61,7 @@ get_header();
                          style="background-color: <?php the_sub_field('color'); ?>;">
                         <!--<a href="<?php /*the_sub_field('url'); */?>"
                            class="absolute inset-0 z-20"></a>-->
-                        <p class="text-white tracking-tight md:text-2.9xl text-2xl font-semibold leading-huge relative z-10 group-hover:underline">
+                        <p class="text-white tracking-tight md:text-2.9xl text-2xl font-semibold leading-huge relative z-10">
                             <?php the_sub_field('text'); ?>
                         </p>
                     </div>
