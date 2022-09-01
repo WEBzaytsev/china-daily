@@ -46,11 +46,11 @@ get_header(); ?>
                                  alt="delivery">
                         </figure>
                         <?php if (have_rows('metrics')) : ?>
-                            <div class="flex justify-between w-full absolute md:bottom-[30%] bottom-[26%] md:left-[18%] left-[12%] lg:max-w-[600px] md:max-w-[400px] max-w-[63%]">
+                            <div class="flex justify-between w-full absolute md:bottom-[30%] bottom-[29%] md:left-[18%] left-[13%] lg:max-w-[600px] md:max-w-[400px] max-w-[63%]">
                                 <?php while (have_rows('metrics')) : the_row(); ?>
-                                    <div class="relative">
+                                    <div class="relative first:ml-0 md:last:ml-0 md:ml-0 ml-6.5 last:ml-4">
                                         <div class="absolute md:opacity-70 left-0 top-0 md:mix-blend-overlay">
-                                            <p class="font-black tracking-tight lg:text-[51px] md:text-[28px] text-[22px] lg:leading-[62px] leading-none">
+                                            <p class="font-black tracking-tight lg:text-[51px] md:text-[28px] text-[21px] lg:leading-[62px] leading-none">
                                                 <?php the_sub_field('value'); ?>
                                             </p>
                                             <p class="font-semibold lg:text-[19.8px] md:text-base text-[10px] lg:leading-[23px] leading-none tracking-small">
@@ -58,7 +58,7 @@ get_header(); ?>
                                             </p>
                                         </div>
                                         <div class="md:opacity-70 opacity-0 mix-blend-overlay">
-                                            <p class="font-black tracking-tight lg:text-[51px] md:text-[28px] text-[22px] lg:leading-[62px] leading-none">
+                                            <p class="font-black tracking-tight lg:text-[51px] md:text-[28px] text-[21px] lg:leading-[62px] leading-none">
                                                 <?php the_sub_field('value'); ?>
                                             </p>
                                             <p class="font-semibold lg:text-[19.8px] md:text-base text-[10px] lg:leading-[23px] leading-none tracking-small">
