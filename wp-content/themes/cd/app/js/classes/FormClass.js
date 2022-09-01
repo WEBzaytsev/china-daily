@@ -8,6 +8,7 @@ export const FormClass = function ($, form) {
     this.form = form;
     this.submitBtn = this.form.find('button[type="submit"]');
     this.formNote = this.form.find('.form-note');
+    this.closeButton = this.form.parent().find('button[aria-label="Close"]');
     this.rules = {
         'feedback-name': {
             required: true,
@@ -32,6 +33,7 @@ export const FormClass = function ($, form) {
                 if (res.ok) {
                     $form.reset();
                     _this.setSuccess();
+                    _this.closeModal();
                 }
             })
             .catch(() => _this.setError());
@@ -64,6 +66,17 @@ export const FormClass = function ($, form) {
 
     this.validateEmail = function (value, element) {
         return this.optional(element) || /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/.test(value);
+    }
+
+    this.closeModal = () => {
+        if (!_this.closeButton.length) {
+            return;
+        }
+
+        setTimeout(
+            () => _this.closeButton.trigger('click'),
+            1500
+        );
     }
 
     this.init = () => {
