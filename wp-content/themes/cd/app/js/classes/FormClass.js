@@ -33,11 +33,22 @@ export const FormClass = function ($, form) {
                 if (res.ok) {
                     $form.reset();
                     _this.setSuccess();
-                    _this.closeModal();
+                    _this.resetFieldsBorder();
+                    setTimeout(() => {
+                        _this.closeModal();
+                        _this.hideNote();
+                    }, 1500);
                 }
             })
             .catch(() => _this.setError());
 
+    }
+
+    this.resetFieldsBorder = () => {
+        const successFields = _this.form.find('.border-green-600');
+        successFields.each(function () {
+            $(this).removeClass('border-green-600');
+        });
     }
 
     this.hideNote = () => {
@@ -73,10 +84,7 @@ export const FormClass = function ($, form) {
             return;
         }
 
-        setTimeout(
-            () => _this.closeButton.trigger('click'),
-            1500
-        );
+        _this.closeButton.trigger('click');
     }
 
     this.init = () => {
