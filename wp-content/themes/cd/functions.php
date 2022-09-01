@@ -9,7 +9,7 @@
 
 if (!defined('CHINA_DAILY')) {
     // Replace the version number of the theme on each release.
-    define('CHINA_DAILY', '1.0.0');
+    define('CHINA_DAILY', '1.0.1');
 }
 
 /**
