@@ -22,12 +22,12 @@ get_header();
                 <!--<div class="grid grid-cols-2 xl:grid-rows-2 gap-2">-->
                 <div class="grid xl:grid-cols-2 xl:grid-rows-<?php echo $rows; ?> gap-2">
                     <div class="relative xl:row-span-full h-full bg-white rounded-30 min-h-300 flex items-center md:px-9 px-3 md:py-4 py-5">
-                        <div class="font-semibold tracking-tight md:text-3.3xl text-2.6xl md:mb-0 mb-[125px] relative z-20">
+                        <div class="font-semibold tracking-tight md:text-3.3xl text-2.6xl md:mb-0 relative z-20">
                             <?php the_sub_field('text'); ?>
                         </div>
                         <?php $img = get_sub_field('img'); ?>
                         <?php if ($img) : ?>
-                            <figure class="absolute z-10 right-0 md:top-1/2 md:-translate-y-1/2 md:bottom-auto bottom-0">
+                            <figure class="absolute z-10 right-0 top-1/2 -translate-y-1/2">
                                 <img src="<?php echo esc_url($img['url']); ?>"
                                      alt="<?php echo esc_attr($img['alt']); ?>"/>
                             </figure>

@@ -4818,6 +4818,10 @@ video {
     margin-bottom: 1rem;
   }
 
+  .md\:mb-\[125px\] {
+    margin-bottom: 125px;
+  }
+
   .md\:block {
     display: block;
   }
